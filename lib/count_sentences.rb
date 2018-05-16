@@ -27,7 +27,10 @@ class String
   end
 
   def count_sentences
-    x = self.split(/\?|\.|!/).length
-    binding.pry
+
+  sentence_array = self.split(/\?|\.|!/).select do |sentence|
+    sentence.length > 1
+  end
+    sentence_array.length
   end
 end
